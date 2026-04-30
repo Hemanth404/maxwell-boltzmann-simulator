@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maxwell-Boltzmann Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="main-title">Maxwell–Boltzmann Distribution Simulator</h1>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+
+        <h2 class="section-title">Controls</h2>
+
+        <!-- Temperature -->
+        <div class="card">
+            <h3>Temperature</h3>
+            <p class="value"><span id="tempVal">300</span> K</p>
+            <input type="range" id="tempSlider" min="100" max="1000" value="300">
+        </div>
+
+        <!-- Gas -->
+        <div class="card">
+            <h3>Gas Type</h3>
+            <select id="gasSelect"></select>
+        </div>
+
+        <!-- Comparison -->
+        <div class="card">
+            <label class="toggle">
+                <input type="checkbox" id="compareToggle">
+                Compare Temperatures
+            </label>
+
+            <div id="compareBox" class="compare-box">
+                <p class="value"><span id="compVal">500</span> K</p>
+                <input type="range" id="compSlider" min="100" max="1000" value="500">
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="card">
+            <h3>About</h3>
+            <p>
+                Maxwell-Boltzmann distribution describes how molecular speeds are distributed in an ideal gas.
+                Higher temperature → higher speeds.
+            </p>
+
+            <div class="formula">
+                f(v) = 4π(m/2πkT)³ᐟ² v² e⁻ᵐᵛ²/2kT
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="main">
+
+        <!-- Graph -->
+        <div class="card graph-card">
+            <h3>Speed Distribution</h3>
+            <canvas id="graph"></canvas>
+        </div>
+
+        <!-- Particles -->
+        <div class="card">
+            <h3>Particle Simulation (50 particles)</h3>
+            <canvas id="particles"></canvas>
+
+            <div class="legend center">
+                <span class="slow">● Slow</span>
+                <span class="medium">● Medium</span>
+                <span class="fast">● Fast</span>
+                <span class="vfast">● Very Fast</span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">
+                <h4>Most Probable Speed (vₚ)</h4>
+                <p>√(2kT/m)</p>
+                <span id="vp" class="orange"></span>
+            </div>
+
+            <div class="stat">
+                <h4>Mean Speed (v̄)</h4>
+                <p>√(8kT/πm)</p>
+                <span id="vavg" class="green"></span>
+            </div>
+
+            <div class="stat">
+                <h4>RMS Speed (vᵣₘₛ)</h4>
+                <p>√(3kT/m)</p>
+                <span id="vrms" class="pink"></span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

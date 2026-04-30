@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    background: #0f172a;
+    color: white;
+    font-family: "Segoe UI", Arial;
+}
+
+/* TITLE */
+.main-title {
+    text-align: center;
+    font-size: 30px;
+    color: #06b6d4;
+    margin: 15px 0;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    background: #1e293b;
+    padding: 15px;
+    border-right: 1px solid #334155;
+}
+
+.section-title {
+    color: #06b6d4;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 15px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* GRAPH CARD */
+.graph-card {
+    height: 380px;
+}
+
+/* CANVAS */
+canvas {
+    width: 100%;
+    height: 320px;
+    background: #0f172a;
+    border: 1px dashed #334155;
+    border-radius: 6px;
+}
+
+/* TEXT */
+h3 {
+    color: #94a3b8;
+}
+
+.value {
+    font-size: 18px;
+    color: #06b6d4;
+    margin: 5px 0;
+}
+
+/* SLIDER */
+input[type=range] {
+    width: 100%;
+}
+
+/* SELECT */
+select {
+    width: 100%;
+    padding: 5px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+}
+
+/* TOGGLE */
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.compare-box {
+    margin-top: 10px;
+}
+
+/* FORMULA */
+.formula {
+    margin-top: 10px;
+    background: #0f172a;
+    padding: 8px;
+    font-family: monospace;
+    color: #64748b;
+    border-radius: 5px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.stat h4 {
+    color: #94a3b8;
+}
+
+.stat p {
+    color: #64748b;
+}
+
+.stat span {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* COLORS */
+.orange { color: #f97316; }
+.green { color: #22c55e; }
+.pink { color: #ec4899; }
+
+/* LEGEND */
+.legend.center {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.legend span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* PARTICLE COLORS */
+.slow { color: #3b82f6; }
+.medium { color: #06b6d4; }
+.fast { color: #f97316; }
+.vfast { color: #ef4444; }
